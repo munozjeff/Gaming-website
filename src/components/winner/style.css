@@ -1,0 +1,58 @@
+.winner{
+    width: 80vw;
+    height: auto;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.389);
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 5px;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%)
+}
+.winner figure{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 30%;
+    height: auto;
+}
+.winner img{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.notification {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.notification h2 {
+    font-size: 24px;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.notification p {
+    font-size: 18px;
+}
+.button-section {
+    margin-top: 20px;
+}
+
+.restart-button {
+    background-color: #008CBA;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+  
