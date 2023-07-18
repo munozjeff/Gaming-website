@@ -1,0 +1,55 @@
+.wooden-frame {
+    background-color: #d2b48c; /* Color madera */
+    border: 10px solid #8b4513; /* Color borde */
+    padding: 20px; /* Espacio interno */
+    width: 400px; /* Ancho del marco */
+    height: 300px; /* Alto del marco */
+    position: relative;
+    width: 100vw;
+    height: 100vw;
+    max-width: 400px;
+    max-height: 400px;
+    box-sizing: border-box;
+}
+  
+.wooden-frame-panel {
+    position: absolute;
+    top: 20px; /* Espacio interno superior */
+    left: 20px; /* Espacio interno izquierdo */
+    right: 20px; /* Espacio interno derecho */
+    bottom: 20px; /* Espacio interno inferior */
+    box-sizing: border-box;
+    font-size: 0px;
+    text-align: left;
+    user-select: none;
+}
+.wooden-frame-grid {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 20%;
+    height: 20%;
+    background-color: #ffffff;
+    border: solid;
+    border-width: 0.1px;
+    position: relative;
+    user-select: none;
+}
+.wooden-frame-grid-white{
+    background-color: white;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 20%;
+    height: 20%;
+    border: solid;
+    border-width: 0.1px;
+    position: relative;
+}
+.wooden-frame-grid-image{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    background-color: aqua;
+}
