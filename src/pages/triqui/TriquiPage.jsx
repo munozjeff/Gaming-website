@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Grid } from '../../components/grid/grid';
 import "./style.css"
 import {winnerCustomHooks } from '../../components/winner/winner';
+import x_letter from "../../assets/x-letter.svg"
+import o_letter from "../../assets/o-letter.svg"
 
 const grids = [
                 <Grid/>,
@@ -151,7 +153,7 @@ function Triqui(){
     const onClickHandler = (e)=>{
         const searchGrid = gridUnavailable.filter(grid => e === grid)
         if (searchGrid.length === 0) {
-            const image = ((count % 2) === 0)?"/src/assets/x-letter.svg":"/src/assets/o-letter.svg"
+            const image = ((count % 2) === 0)?x_letter:o_letter
             setGrid(grid.map((element,i)=>(e === i)?<Grid image={image}/>:element))
             setCount(count+1)
             setGridUnavailable([...gridUnavailable,e])
