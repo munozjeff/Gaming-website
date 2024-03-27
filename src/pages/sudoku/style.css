@@ -1,0 +1,14 @@
+.sudoku-page{
+    width: 100%;
+    height: 100%;
+}
+.panel-sudoku{
+    width: 100vw;
+    height: 100vw;
+    max-width: 400px;
+    max-height: 400px;
+    display: inline-block;
+    font-size: 0;
+    /* background-color: #333333; */
+    text-align: center;
+}

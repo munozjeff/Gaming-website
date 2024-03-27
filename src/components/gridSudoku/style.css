@@ -1,0 +1,19 @@
+.sudoku-grid{
+    width: calc(100% / 3);
+    height: calc(100% / 3);
+    display: inline-block;
+    font-size: 0;
+}
+.sudoku-cell{
+    width: calc(100% / 3);
+    height: calc(100% / 3);
+    display: inline-block;
+    color: black;
+    background-color: aliceblue;
+    margin: 0;
+    padding: 0;
+    border: solid;
+    border-width: 0.5px;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+}

@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import "./style.css"
 import { useImageSplitter } from '../../customHooks/useImageSppliter';
+import figura from "../../assets/golden_cup.png"
 
 function JigsawPuzzle(){
     const [quadricula,setQuadricula] = useState([])
@@ -12,12 +13,13 @@ function JigsawPuzzle(){
     const [refElement,setRefElement] = useState(null)
     const [toMove, setToMove] = useState("")
     const {imagePieces, imagenPiecesFunction} = useImageSplitter()
+    
 
     const canvasRef = useRef(null);
     
     useEffect(()=>{
         if (canvasRef) {
-            imagenPiecesFunction(canvasRef, "/src/assets/golden_cup.png", dimension, dimension)
+            imagenPiecesFunction(canvasRef, figura, dimension, dimension)
         }
     },[])
 
@@ -29,12 +31,19 @@ function JigsawPuzzle(){
                 let row = []
                 let idImage = i
                 for (let j = 0; j < dimension; j++) {
-                    row = [...row,<img id={id} src={imagePieces[idImage]} className='wooden-frame-grid-image'></img>]
+                    row = [...row,<img id={id} src={imagePieces[id]} className='wooden-frame-grid-image'></img>]
                     id++
                     idImage = idImage + 5
                 }    
                 column = [...column,row]
             } 
+
+            // const shuffledArray = column
+            // for (let i = shuffledArray.length - 1; i > 0; i--) {
+            //     const j = Math.floor(Math.random() * (i + 1));
+            //     [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+            // }
+
             setQuadricula(column)
         }
         else if(quadricula && quadricula.length>0 ){
@@ -46,6 +55,24 @@ function JigsawPuzzle(){
                 refElement.target.style.left = `0px`
                 setInitScroll(false)
             }
+            let countTemp = 0
+            for (let i = 0; i < quadricula.length; i++) {
+                let idItemTemp = i
+                for (let j = 0; j < quadricula[i].length; j++) {
+                    if(quadricula[i][j].props.id === idItemTemp){
+                        countTemp++
+                    }
+                    else{
+                        countTemp = 0
+                        break
+                    }
+                    idItemTemp = idItemTemp + 5
+                }
+                if(countTemp === 0){
+                    break
+                }
+            }
+            console.log(countTemp);
         }
     },[dimension,quadricula,imagePieces])
 
@@ -193,7 +220,11 @@ function JigsawPuzzle(){
     }
 
     return(
-        <>
+
+        <div>
+            <figure id='figure-model'>
+                <img src={figura} alt="golden_cup" />
+            </figure>
             <div className='wooden-frame'>
                 <div className='wooden-frame-panel'>
                     {(quadricula && quadricula.length > 0) &&
@@ -213,7 +244,8 @@ function JigsawPuzzle(){
                 </div>
             </div>
             <canvas ref={canvasRef} style={{ display: 'none' }} />
-        </>
+        </div>
+            
         
     )
 }

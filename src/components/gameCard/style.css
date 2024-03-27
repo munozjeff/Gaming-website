@@ -1,0 +1,19 @@
+.card-game-container{
+    background-color: white;
+    padding: 5px;
+    display: inline-block;
+    margin: 10px;
+    cursor: pointer;
+}
+.card-game-container>.card-game{
+    width: 150px;
+    height: auto;
+    object-fit: cover;
+    background-color: blue;
+    /* margin: 5px; */
+    aspect-ratio: 1;
+}
+.card-game-container>h3{
+    color: black;
+    margin: 2px 0;
+}

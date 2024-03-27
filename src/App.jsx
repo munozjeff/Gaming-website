@@ -1,15 +1,22 @@
 import './App.css'
-import { ImageSplitter } from './components/test/test';
 import { JigsawPuzzle } from './pages/jigsawPuzzle/jigsawPuzzle'
 import { Triqui } from './pages/triqui/TriquiPage'
+import { GameCard } from './components/gameCard/GameCard'
+import { Main } from './pages/Main'
+import { useEffect, useState } from 'react'
 
 function App() {
+  const[idGameSelected,setIdGameSelected] = useState(0)
+  useEffect(()=>{
+    console.log(idGameSelected);
+  },[idGameSelected])
   return (
     <>
       {/* <Triqui/> */}
-      <JigsawPuzzle/>
-      {/* <ImageSplitter src="/src/assets/golden_cup.png" rows={5} cols={5}/> */}
-      
+      {/* <JigsawPuzzle/> */}
+      {idGameSelected === 0 && <Main clickHandler={(id)=>setIdGameSelected(id)}/>}
+      {idGameSelected === 1 && <JigsawPuzzle/>}
+      {idGameSelected === 2 && <Triqui/>}
     </>
   )
 }
