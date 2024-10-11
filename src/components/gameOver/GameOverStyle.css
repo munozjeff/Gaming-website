@@ -1,0 +1,56 @@
+.game-over-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.85); /* Fondo semitransparente negro */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000; /* Asegurar que esté por encima de otros elementos */
+}
+
+.game-over-message {
+    background-color: #111; /* Fondo negro */
+    color: #FFD700; /* Texto dorado */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.8); /* Sombra alrededor */
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #FF4136; /* Rojo para el mensaje de pérdida */
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+strong {
+    font-size: 1.5rem;
+}
+
+.restart-button {
+    background-color: #FFD700; /* Fondo dorado */
+    color: #111; /* Texto negro */
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.restart-button:hover {
+    background-color: #FF4136; /* Rojo en hover */
+    color: #fff;
+}

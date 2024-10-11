@@ -1,0 +1,45 @@
+.incorrect-letters-container {
+    /* margin-top: 20px; */
+    /* padding: 15px; */
+    background-color: #222; /* Fondo oscuro */
+    border-radius: 10px;
+    color: #FFD700; /* Texto en color dorado */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5); /* Sombra */
+    height: 15%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2px 0;
+}
+
+.incorrect-letters {
+    display: flex;
+    flex-wrap: wrap; /* Permitir que las letras incorrectas se ajusten en múltiples filas si es necesario */
+    /* gap: 10px; */
+    justify-content: space-between; /* Centrar las letras */
+    /* margin-top: 10px; */
+}
+
+.incorrect-letter {
+    font-size: 1.5rem;
+    color: #FF4136; /* Rojo para las letras incorrectas */
+    font-weight: bold;
+    background-color: #fff;
+    padding: 8px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+h3 {
+    margin:0;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    /* margin-bottom: 5px; */
+}

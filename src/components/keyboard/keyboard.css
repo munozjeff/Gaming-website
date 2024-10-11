@@ -1,0 +1,47 @@
+.keyboard {
+    display: flex;
+    flex-wrap: wrap; /* Permitir que las teclas se ajusten en varias filas */
+    justify-content: center; /* Centrar el teclado */
+    gap: 10px; /* Espaciado entre las teclas */
+    padding: 20px;
+    background-color: #222; /* Fondo oscuro */
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5); /* Sombra para un efecto elevado */
+    width: 100%; /* Ocupa todo el ancho del contenedor padre */
+    height: 50%; /* Ajustar altura automáticamente según el contenido */
+    box-sizing: border-box;
+    margin: 2px 0;
+    flex: 1;
+}
+
+.key {
+    background-color: #FFD700; /* Color dorado */
+    color: #000;
+    font-size: calc(1vw + 10px); /* Tamaño de letra que se ajusta según el ancho de la ventana */
+    border: none;
+    flex: 1 0 8%; /* Ajuste de tamaño del botón, el 8% se ajusta al contenedor */
+    min-width: 50px; /* Asegurar que las teclas no se hagan demasiado pequeñas */
+    padding: 15px;
+    border-radius: 10px; /* Esquinas redondeadas */
+    cursor: pointer;
+    transition: transform 0.1s ease, background-color 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Efecto de sombra */
+    text-align: center;
+}
+
+.key:hover {
+    background-color: #ffcd38; /* Un dorado más claro al pasar el mouse */
+    transform: scale(1.05); /* Efecto de agrandar al pasar el mouse */
+}
+
+.key:active {
+    background-color: #c7a500; /* Color más oscuro cuando se presiona */
+    transform: scale(0.95); /* Leve reducción al hacer clic */
+}
+
+@media (max-width: 768px) {
+  .key {
+      font-size: calc(2vw + 8px); /* Ajuste de tamaño de letra para pantallas más pequeñas */
+      padding: 10px;
+  }
+}
