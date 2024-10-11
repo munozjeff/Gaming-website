@@ -1,7 +1,8 @@
-import React, { useEffect, useState, useRef } from 'react';
+import { useEffect, useRef, useState } from "react";
 import "./style.css"
 import { useImageSplitter } from '../../customHooks/useImageSppliter';
 import figura from "../../assets/golden_cup.png"
+
 
 function JigsawPuzzle(){
     const [quadricula,setQuadricula] = useState([])
